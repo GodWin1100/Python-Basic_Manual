@@ -58,17 +58,17 @@ print(sub)
 # Positional and keyword parameters
 
 
-# parameter after * are keyword parameter they can only be passed by explicitly specifying argument
+# ? parameter after * are keyword parameter they can only be passed by explicitly specifying argument
 def func1(pos1, pos2, *, kw1, kw2):
     print(pos1, pos2)
     print(kw1, kw2)
 
 
-# func1(1, 2, 3, 4) WRONG
-# func1(kw1=3, 1, 2, kw2=4) Keyword argument should be passed at last positions
+#! func1(1, 2, 3, 4) WRONG
+#! func1(kw1=3, 1, 2, kw2=4) Keyword argument should be passed at last positions
 func1(1, 2, kw1=3, kw2=4)
 
-# Parameter before / are positional and those cannot be passed by specifying keyword
+# ? Parameter before / are positional and those cannot be passed by specifying keyword
 def func2(pos1, pos2, /, strict_pos1, strict_pos2):
     print(pos1, pos2)
     print(strict_pos1, strict_pos2)
@@ -77,4 +77,4 @@ def func2(pos1, pos2, /, strict_pos1, strict_pos2):
 func2(5, 6, strict_pos2=8, strict_pos1=9)
 
 
-# Other argument before * and after / are normal parameter which can be passed as argument by specifying keywords or as positional arguments
+# * Other argument before * and after / are normal parameter which can be passed as argument by specifying keywords or as positional arguments
